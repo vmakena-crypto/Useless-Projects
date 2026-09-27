@@ -1,5 +1,6 @@
 /* ============================================================
-   MOBILE OPTIMISATION
+   MOBILE — CRAZY MODE
+   Optimised for phones, designed to look intentionally absurd
    ============================================================ */
 
 @media (max-width: 700px) {
@@ -7,16 +8,33 @@
   html,
   body {
     width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
   body {
-    font-size: 14px;
+    background:
+      radial-gradient(
+        circle at 15% 10%,
+        rgba(221,115,110,.18) 0 45px,
+        transparent 46px
+      ),
+      radial-gradient(
+        circle at 90% 35%,
+        rgba(94,149,205,.16) 0 65px,
+        transparent 66px
+      ),
+      var(--antique);
   }
 
+
+  /* ==========================================================
+     PAGE
+     ========================================================== */
+
   .page {
-    width: calc(100% - 20px);
-    margin: 0 auto;
+    width: calc(100% - 18px);
+    margin: auto;
   }
 
 
@@ -25,25 +43,31 @@
      ========================================================== */
 
   .top-bar {
-    padding: 18px 3px 0;
-    align-items: center;
+    padding: 15px 2px 0;
+    align-items: flex-start;
+  }
+
+  .fake-logo {
+    transform: rotate(-4deg);
   }
 
   .fake-logo span {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .fake-logo small {
-    font-size: 6px;
-    max-width: 150px;
+    font-size: 5px;
+    letter-spacing: .6px;
+    max-width: 145px;
   }
 
   .file-number {
-    font-size: 7px;
+    font-size: 6px;
+    transform: rotate(5deg);
   }
 
   .file-number strong {
-    font-size: 10px;
+    font-size: 9px;
   }
 
 
@@ -52,56 +76,98 @@
      ========================================================== */
 
   .hero {
-    min-height: auto;
-    padding: 55px 5px 80px;
+    min-height: 620px;
+    padding: 48px 4px 55px;
+    position: relative;
   }
 
   .hero-small {
-    max-width: 80%;
-    padding: 6px 9px;
-    font-size: 7px;
-    letter-spacing: 1.2px;
+    max-width: 73%;
+    padding: 6px 8px;
+
+    font-size: 6px;
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+
+    transform: rotate(-3deg);
   }
 
+
+  /* Main title */
+
   .hero h1 {
-    margin-top: 28px;
-    font-size: clamp(54px, 17vw, 90px);
-    line-height: .78;
+    margin-top: 35px;
+
+    font-size:
+      clamp(55px, 18vw, 95px);
+
+    line-height: .72;
+
     letter-spacing: -3px;
+
+    transform:
+      rotate(-2deg);
   }
 
   .hero h1 span {
-    margin-left: 8%;
+    margin-left: 9%;
+
+    transform:
+      rotate(4deg);
   }
 
 
-  /* Smaller official stamp */
+  /* ==========================================================
+     OFFICIAL STAMP
+     ========================================================== */
 
   .official-stamp {
-    width: 78px;
-    height: 78px;
-    top: 45px;
-    right: 2px;
+
+    width: 82px;
+    height: 82px;
+
+    top: 42px;
+    right: 0;
 
     border-width: 3px;
 
     font-size: 7px;
-    line-height: 1.05;
 
-    transform: rotate(10deg);
+    line-height: 1;
+
+    transform:
+      rotate(14deg);
+
+    z-index: 4;
   }
 
 
-  /* Hero description */
+  /* ==========================================================
+     HERO TEXT
+     ========================================================== */
 
   .hero-sub {
-    margin: 48px 0 0 3%;
+    margin:
+      58px 0 0 3%;
+
+    position: relative;
   }
 
   .hero-question {
-    font-size: 20px;
-    line-height: 1.1;
+    max-width: 80%;
+
+    font-size:
+      clamp(19px, 5.5vw, 24px);
+
+    line-height: 1.05;
+
+    transform:
+      rotate(-2deg);
   }
+
+
+  /* handwritten "BAD IDEA" */
 
   .arrow-note {
     position: relative;
@@ -112,13 +178,17 @@
     width: fit-content;
 
     margin:
-      18px 0 0 45%;
+      18px 0 0 42%;
 
-    font-size: 12px;
+    font-size: 11px;
+
+    transform:
+      rotate(7deg);
   }
 
   .arrow-note b {
-    font-size: 35px;
+    font-size: 38px;
+    line-height: .5;
   }
 
 
@@ -127,24 +197,36 @@
      ========================================================== */
 
   .useless-meter {
-    width: 96%;
-    margin: 65px auto 0;
+
+    width: 94%;
+
+    margin:
+      65px auto 0;
+
+    transform:
+      rotate(-1deg);
   }
 
   .meter-title {
-    font-size: 8px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .meter-line {
+    gap: 7px;
   }
 
   .meter-track {
-    height: 14px;
+    height: 15px;
+    border-width: 2px;
   }
 
   .meter-line > span {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .meter-foot {
-    font-size: 9px;
+    font-size: 8px;
   }
 
 
@@ -153,87 +235,153 @@
      ========================================================== */
 
   .hero-doodle {
-    position: relative;
 
-    right: auto;
-    bottom: auto;
+    position: absolute;
 
-    margin:
-      55px 0 0 auto;
+    right: 4px;
+    bottom: 18px;
 
-    width: 80px;
+    width: 85px;
 
-    font-size: 10px;
+    font-size: 8px;
 
-    transform: rotate(-5deg);
+    transform:
+      rotate(-8deg);
   }
 
   .hero-doodle span:nth-child(3) {
-    font-size: 18px;
+    font-size: 17px;
   }
 
 
   /* ==========================================================
-     RANDOM DOODLES
+     FLOATING DOODLES
      ========================================================== */
 
+  .scribble {
+    z-index: 20;
+    pointer-events: none;
+  }
+
   .scribble-1 {
-    top: 16%;
-    left: -2px;
+    top: 15%;
+    left: -3px;
+
     font-size: 15px;
+
+    color: var(--coral);
+
+    transform:
+      rotate(-20deg);
+  }
+
+  .scribble-2 {
+    top: 37%;
+    right: -7px;
+
+    font-size: 8px;
+
+    color: var(--blue);
+
+    transform:
+      rotate(75deg);
   }
 
   .scribble-3 {
-    top: 52%;
-    left: 2px;
-    font-size: 13px;
+    top: 53%;
+    left: 1px;
+
+    font-size: 12px;
+
+    transform:
+      rotate(-9deg);
+  }
+
+  .scribble-4 {
+    top: 68%;
+    right: -5px;
+
+    font-size: 8px;
+
+    transform:
+      rotate(-8deg);
   }
 
   .scribble-5 {
-    bottom: 8%;
+    bottom: 6%;
     left: 4px;
-    font-size: 9px;
+
+    font-size: 8px;
+
+    transform:
+      rotate(5deg);
   }
 
   .scribble-6 {
     top: 28%;
-    right: 4px;
-    font-size: 14px;
+    right: 1px;
+
+    font-size: 13px;
+
+    transform:
+      rotate(15deg);
+  }
+
+  .scribble-7 {
+    top: 88%;
+    right: 5px;
+
+    font-size: 7px;
   }
 
   .scribble-8 {
-    top: 61%;
-    right: 0;
-    font-size: 8px;
+    top: 57%;
+    right: -5px;
+
+    font-size: 7px;
+
+    transform:
+      rotate(80deg);
   }
 
-  /* Hide doodles that interfere with form */
 
-  .scribble-2,
-  .scribble-4,
-  .scribble-7,
-  .shape-arrow,
-  .shape-zigzag {
-    display: none;
-  }
-
+  /* ==========================================================
+     RANDOM SYMBOLS
+     ========================================================== */
 
   .shape-star {
-    top: 24%;
-    right: 4%;
-    font-size: 38px;
+
+    top: 23%;
+    right: 5%;
+
+    font-size: 35px;
+
+    transform:
+      rotate(25deg);
   }
 
   .shape-cross {
-    top: 72%;
-    left: 0;
-    font-size: 42px;
+
+    top: 71%;
+    left: -2px;
+
+    font-size: 45px;
+
+    transform:
+      rotate(18deg);
   }
 
   .shape-circle {
-    top: 46%;
-    right: -20px;
-    font-size: 60px;
+
+    top: 47%;
+    right: -23px;
+
+    font-size: 65px;
+  }
+
+  .shape-arrow,
+  .shape-zigzag {
+    display: none;
   }
 
 
@@ -243,34 +391,48 @@
 
   .form-area {
     padding:
-      35px 0 80px;
+      30px 0 80px;
   }
 
 
-  /* Background blobs become smaller */
+  /* ==========================================================
+     CRAZY BACKGROUND BLOBS
+     ========================================================== */
 
   .blob-green {
-    width: 200px;
-    height: 260px;
 
-    left: -120px;
-    top: 260px;
-  }
+    width: 210px;
+    height: 280px;
 
-  .blob-coral {
-    width: 190px;
-    height: 250px;
+    left: -155px;
+    top: 230px;
 
-    right: -120px;
-    top: 750px;
+    transform:
+      rotate(23deg);
   }
 
   .blob-yellow {
-    width: 130px;
+
+    width: 125px;
     height: 150px;
 
     right: -60px;
-    top: 60px;
+    top: 50px;
+
+    transform:
+      rotate(-18deg);
+  }
+
+  .blob-coral {
+
+    width: 200px;
+    height: 250px;
+
+    right: -135px;
+    top: 700px;
+
+    transform:
+      rotate(-25deg);
   }
 
 
@@ -279,16 +441,27 @@
      ========================================================== */
 
   .form-paper {
-    padding: 30px 17px 40px;
 
-    border-width: 2px;
+    padding:
+      28px 15px 40px;
+
+    border-width:
+      2px;
+
+    /*
+       Not a perfect rounded card.
+       Slightly crooked paper.
+    */
 
     border-radius:
       5% 3% 6% 4% /
       3% 6% 4% 5%;
 
+    transform:
+      rotate(-.4deg);
+
     box-shadow:
-      7px 7px 0 var(--dark-green);
+      7px 8px 0 var(--dark-green);
   }
 
 
@@ -297,30 +470,40 @@
      ========================================================== */
 
   .step {
-    display: grid;
+
+    display:
+      grid;
 
     grid-template-columns:
-      48px minmax(0, 1fr);
+      45px minmax(0, 1fr);
 
-    gap: 13px;
+    gap:
+      12px;
 
-    align-items: start;
+    align-items:
+      start;
   }
 
   .step + .step {
-    margin-top: 75px;
+    margin-top:
+      78px;
   }
 
 
-  /* Step circles */
+  /* ==========================================================
+     STEP MARKERS
+     ========================================================== */
 
   .step-marker {
-    width: 45px;
-    height: 45px;
 
-    border-width: 2px;
+    width: 43px;
+    height: 43px;
 
-    font-size: 9px;
+    border-width:
+      2px;
+
+    font-size:
+      8px;
 
     box-shadow:
       4px 4px 0 var(--coral);
@@ -338,71 +521,114 @@
 
 
   /* ==========================================================
-     HEADINGS
+     STEP TITLES
      ========================================================== */
 
   .tiny-label {
-    font-size: 7px;
-    letter-spacing: 1px;
-    margin-bottom: 9px;
+
+    font-size:
+      6px;
+
+    letter-spacing:
+      .8px;
+
+    margin-bottom:
+      9px;
   }
 
   .step-content h2 {
+
     font-size:
       clamp(29px, 9vw, 42px);
 
-    line-height: .86;
+    line-height:
+      .82;
 
-    letter-spacing: -1.5px;
+    letter-spacing:
+      -1.5px;
   }
 
   .step-content h2 em {
-    margin-left: 4%;
+
+    margin-left:
+      5%;
+
+    transform:
+      rotate(-3deg);
   }
 
   .hand-note {
+
     margin:
-      18px 0 30px;
+      18px 0 28px;
 
-    font-size: 12px;
+    font-size:
+      12px;
 
-    line-height: 1.35;
+    line-height:
+      1.35;
+
+    transform:
+      rotate(-1deg);
   }
 
 
   /* ==========================================================
-     TEAM NAME
+     INPUTS
      ========================================================== */
 
   .weird-field {
-    margin-bottom: 21px;
+    margin-bottom:
+      22px;
   }
 
   .weird-field label {
-    font-size: 9px;
-    margin-bottom: 5px;
+
+    font-size:
+      8px;
+
+    margin-bottom:
+      4px;
   }
 
   .field-arrow {
-    display: none;
+    display:
+      none;
   }
 
   input {
-    min-height: 46px;
+
+    width:
+      100%;
+
+    min-height:
+      47px;
 
     padding:
-      11px 2px;
+      10px 2px;
 
-    font-size: 14px;
+    font-size:
+      14px;
 
-    border-bottom-width: 2px;
+    border-bottom:
+      2px solid var(--ink);
+
+    background:
+      transparent;
+  }
+
+  input:focus {
+    background:
+      rgba(221,115,110,.10);
   }
 
   .field-comment {
-    margin:
-      6px 0 0 2px;
 
-    font-size: 9px;
+    margin:
+      5px 0 0;
+
+    font-size:
+      8px;
   }
 
 
@@ -411,122 +637,181 @@
      ========================================================== */
 
   .member-card {
-    padding: 23px 17px;
+
+    padding:
+      22px 16px;
 
     margin:
-      25px 0;
+      27px 0;
 
-    border-width: 2px;
+    border-width:
+      2px;
 
     /*
-      Keep the weird shape,
-      but don't make it too extreme.
+       Weird, but controlled.
+       The form stays usable.
     */
 
     border-radius:
-      17% 9% 15% 8% /
-      9% 17% 8% 15%;
+      17% 9% 14% 8% /
+      10% 16% 8% 14%;
 
-    transform: rotate(-.5deg);
+    transform:
+      rotate(-.8deg);
   }
 
   .member-card:nth-child(2) {
-    border-radius:
-      10% 17% 8% 15% /
-      16% 8% 17% 10%;
 
-    transform: rotate(.7deg);
+    border-radius:
+      9% 17% 8% 14% /
+      16% 9% 14% 8%;
+
+    transform:
+      rotate(1deg);
   }
 
   .member-card:nth-child(3) {
+
     border-radius:
-      15% 8% 17% 10% /
-      8% 16% 10% 17%;
+      14% 8% 17% 10% /
+      8% 15% 10% 17%;
 
-    transform: rotate(-.7deg);
-  }
-
-
-  /* Member header */
-
-  .member-top {
-    margin-bottom: 20px;
-  }
-
-  .human-number {
-    font-size: 8px;
-  }
-
-  .human-number strong {
-    font-size: 16px;
-  }
-
-  .human-status {
-    font-size: 7px;
-  }
-
-
-  /* One field per row */
-
-  .member-fields {
-    display: block;
-  }
-
-  .member-fields .weird-field {
-    margin-bottom: 16px;
-  }
-
-  .email-field {
-    margin-bottom: 5px !important;
-  }
-
-
-  .member-doodle {
-    position: relative;
-
-    right: auto;
-    bottom: auto;
-
-    margin-top: 15px;
-
-    font-size: 9px;
-
-    text-align: right;
+    transform:
+      rotate(-1.2deg);
   }
 
 
   /* ==========================================================
-     ADD HUMAN BUTTON
+     MEMBER HEADER
+     ========================================================== */
+
+  .member-top {
+
+    margin-bottom:
+      20px;
+  }
+
+  .human-number {
+
+    font-size:
+      7px;
+  }
+
+  .human-number strong {
+
+    font-size:
+      15px;
+  }
+
+  .human-status {
+
+    font-size:
+      6px;
+
+    transform:
+      rotate(5deg);
+  }
+
+
+  /* ==========================================================
+     MEMBER FIELDS
+     ========================================================== */
+
+  .member-fields {
+
+    display:
+      block;
+  }
+
+  .member-fields .weird-field {
+
+    margin-bottom:
+      17px;
+  }
+
+  .email-field {
+
+    margin-bottom:
+      4px !important;
+  }
+
+  .member-doodle {
+
+    position:
+      relative;
+
+    right:
+      auto;
+
+    bottom:
+      auto;
+
+    margin-top:
+      13px;
+
+    text-align:
+      right;
+
+    font-size:
+      8px;
+  }
+
+
+  /* ==========================================================
+     ADD HUMAN
      ========================================================== */
 
   .add-member-btn {
-    width: 94%;
 
-    min-height: 58px;
+    width:
+      95%;
 
-    padding: 12px 8px;
+    min-height:
+      61px;
 
-    gap: 7px;
+    margin:
+      28px auto 0;
 
-    border-width: 2px;
+    padding:
+      10px 8px;
 
-    font-size: 14px;
+    gap:
+      6px;
 
-    flex-wrap: wrap;
+    border-width:
+      2px;
+
+    font-size:
+      13px;
+
+    line-height:
+      1;
+
+    flex-wrap:
+      wrap;
   }
 
   .add-symbol {
-    font-size: 20px;
+    font-size:
+      21px;
   }
 
   .add-member-btn small {
-    width: 100%;
-    font-size: 7px;
+
+    width:
+      100%;
+
+    font-size:
+      6px;
   }
 
   .limit-note {
-    font-size: 9px;
-    line-height: 1.3;
+
+    font-size:
+      8px;
+
+    line-height:
+      1.3;
   }
 
 
@@ -535,26 +820,34 @@
      ========================================================== */
 
   .warning-cloud {
+
     margin:
-      28px 0;
+      27px 0;
 
     padding:
-      17px;
+      16px;
 
     gap:
-      13px;
+      12px;
 
     border-width:
       2px;
 
     border-radius:
-      20% 12% 18% 10% /
-      12% 20% 10% 18%;
+      18% 11% 17% 10% /
+      12% 18% 10% 17%;
+
+    transform:
+      rotate(1deg);
   }
 
   .warning-symbol {
-    width: 42px;
-    height: 42px;
+
+    width:
+      42px;
+
+    height:
+      42px;
 
     flex:
       0 0 42px;
@@ -563,26 +856,39 @@
       2px;
 
     font-size:
-      18px;
+      17px;
   }
 
   .warning-cloud strong {
-    font-size: 9px;
+
+    font-size:
+      8px;
   }
 
   .warning-cloud p {
-    font-size: 11px;
-    line-height: 1.3;
+
+    margin-top:
+      5px;
+
+    font-size:
+      10px;
+
+    line-height:
+      1.35;
   }
 
 
   /* ==========================================================
-     SUBMIT BUTTON
+     SUBMIT
      ========================================================== */
 
   .submit-btn {
+
+    width:
+      100%;
+
     min-height:
-      78px;
+      82px;
 
     padding:
       15px 10px;
@@ -591,49 +897,85 @@
       3px;
 
     box-shadow:
-      6px 6px 0 var(--dark-green);
+      6px 7px 0 var(--dark-green);
 
     border-radius:
-      22% 15% 20% 12% /
-      15% 22% 12% 20%;
+      20% 12% 19% 11% /
+      13% 21% 11% 19%;
+
+    transform:
+      rotate(-1deg);
+  }
+
+  .submit-btn:hover {
+
+    transform:
+      rotate(1deg);
   }
 
   .submit-main {
+
     font-size:
-      clamp(13px, 4vw, 18px);
+      clamp(12px, 4vw, 17px);
 
     line-height:
       1.1;
   }
 
   .submit-small {
-    font-size: 6px;
-    line-height: 1.3;
+
+    margin-top:
+      7px;
+
+    font-size:
+      6px;
+
+    line-height:
+      1.3;
   }
 
 
   /* ==========================================================
-     FINAL NOTES
+     POST SUBMIT CHAOS
      ========================================================== */
 
   .post-submit-note {
+
     display:
       grid;
 
     grid-template-columns:
-      1fr 1fr 1fr;
+      repeat(3, 1fr);
 
     gap:
-      5px;
+      4px;
 
     margin-top:
       25px;
 
     font-size:
-      7px;
+      6px;
+
+    line-height:
+      1.2;
 
     text-align:
       center;
+  }
+
+  .post-submit-note span:nth-child(1) {
+    transform:
+      rotate(-6deg);
+  }
+
+  .post-submit-note span:nth-child(2) {
+    transform:
+      rotate(5deg);
+  }
+
+  .post-submit-note span:nth-child(3) {
+    transform:
+      rotate(-3deg);
   }
 
 
@@ -642,11 +984,13 @@
      ========================================================== */
 
   .success-screen {
+
     padding:
       45px 8px;
   }
 
   .success-orbit {
+
     width:
       105px;
 
@@ -655,6 +999,7 @@
   }
 
   .success-symbol {
+
     width:
       70px;
 
@@ -666,32 +1011,48 @@
   }
 
   .success-label {
+
+    margin-top:
+      25px;
+
     font-size:
       7px;
 
     letter-spacing:
-      2px;
+      1.5px;
   }
 
   .success-screen h2 {
+
+    margin:
+      13px 0;
+
     font-size:
       clamp(42px, 13vw, 65px);
   }
 
   .success-screen p {
+
     font-size:
-      14px;
+      13px;
 
     line-height:
       1.4;
   }
 
   .success-stamp {
-    font-size:
-      8px;
+
+    margin-top:
+      25px;
+
+    padding:
+      10px 14px;
 
     border-width:
       3px;
+
+    font-size:
+      7px;
   }
 
 
@@ -700,6 +1061,7 @@
      ========================================================== */
 
   footer {
+
     flex-direction:
       column;
 
@@ -707,10 +1069,10 @@
       9px;
 
     padding:
-      30px 5px 45px;
+      28px 5px 45px;
 
     font-size:
-      7px;
+      6px;
 
     text-align:
       center;
@@ -720,22 +1082,23 @@
 
 
 /* ============================================================
-   EXTRA SMALL PHONES
+   VERY SMALL PHONES — 360px and below
    ============================================================ */
 
 @media (max-width: 380px) {
 
   .page {
     width:
-      calc(100% - 14px);
+      calc(100% - 12px);
   }
 
   .hero {
     padding-top:
-      45px;
+      42px;
   }
 
   .hero h1 {
+
     font-size:
       51px;
 
@@ -744,14 +1107,15 @@
   }
 
   .official-stamp {
+
     width:
-      68px;
+      66px;
 
     height:
-      68px;
+      66px;
 
     font-size:
-      6px;
+      5.5px;
   }
 
   .hero-question {
@@ -760,27 +1124,30 @@
   }
 
   .form-paper {
+
     padding:
-      25px 13px 35px;
+      24px 12px 34px;
   }
 
   .step {
+
     grid-template-columns:
-      42px minmax(0, 1fr);
+      40px minmax(0, 1fr);
 
     gap:
-      10px;
+      9px;
   }
 
   .step-marker {
+
     width:
-      40px;
+      38px;
 
     height:
-      40px;
+      38px;
 
     font-size:
-      8px;
+      7px;
   }
 
   .step-content h2 {
@@ -790,7 +1157,7 @@
 
   .member-card {
     padding:
-      20px 14px;
+      19px 13px;
   }
 
   input {
@@ -800,12 +1167,12 @@
 
   .add-member-btn {
     font-size:
-      12px;
+      11px;
   }
 
   .submit-main {
     font-size:
-      12px;
+      11px;
   }
 
 }
