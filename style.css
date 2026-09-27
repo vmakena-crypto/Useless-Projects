@@ -1817,3 +1817,157 @@ footer {
     animation: none !important;
   }
 }
+/* ============================================================
+   COMPACT MODE
+   Reduce unnecessary vertical space
+   ============================================================ */
+
+.hero {
+  min-height: clamp(500px, 58vw, 700px);
+  padding-top: clamp(35px, 5vw, 60px);
+  padding-bottom: clamp(30px, 5vw, 60px);
+}
+
+.hero h1 {
+  margin-top: clamp(25px, 3.5vw, 45px);
+}
+
+.hero-sub {
+  margin-top: clamp(35px, 4vw, 55px);
+}
+
+.arrow-note {
+  margin-top: 12px;
+}
+
+.useless-meter {
+  margin-top: clamp(40px, 5vw, 65px);
+}
+
+.hero-doodle {
+  bottom: clamp(15px, 3vw, 40px);
+}
+
+
+/* FORM */
+
+.form-area {
+  padding-top: clamp(20px, 4vw, 50px);
+  padding-bottom: clamp(55px, 7vw, 85px);
+}
+
+.step + .step {
+  margin-top: clamp(50px, 6vw, 75px);
+}
+
+
+/* TITLES */
+
+.hand-note {
+  margin-top: 15px;
+  margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+
+/* MEMBER CARDS */
+
+.member-card {
+  margin: clamp(15px, 2vw, 25px) 0;
+}
+
+.member-top {
+  margin-bottom: clamp(12px, 1.8vw, 22px);
+}
+
+.member-fields .weird-field {
+  margin-bottom: 6px;
+}
+
+
+/* ADD MEMBER */
+
+.add-member-btn {
+  margin-top: 18px;
+}
+
+
+/* WARNING */
+
+.warning-cloud {
+  margin: 25px 0;
+  padding: clamp(13px, 2vw, 22px);
+}
+
+
+/* SUBMIT */
+
+.submit-btn {
+  min-height: clamp(68px, 7vw, 88px);
+}
+
+.post-submit-note {
+  margin-top: 20px;
+}
+
+
+/* SUCCESS */
+
+.success-screen {
+  padding-top: clamp(35px, 5vw, 60px);
+  padding-bottom: clamp(40px, 6vw, 70px);
+}
+
+
+/* FOOTER */
+
+footer {
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+
+/* ============================================================
+   MOBILE — EVEN TIGHTER
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: 500px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .hero h1 {
+    margin-top: 25px;
+  }
+
+  .hero-sub {
+    margin-top: 35px;
+  }
+
+  .useless-meter {
+    margin-top: 38px;
+  }
+
+  .form-area {
+    padding-top: 15px;
+    padding-bottom: 55px;
+  }
+
+  .step + .step {
+    margin-top: 50px;
+  }
+
+  .member-card {
+    margin: 15px 0;
+  }
+
+  .warning-cloud {
+    margin: 20px 0;
+  }
+
+  .post-submit-note {
+    margin-top: 18px;
+  }
+}
